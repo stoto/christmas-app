@@ -30,14 +30,9 @@ class MainActivity : AppCompatActivity(), SoundPool.OnLoadCompleteListener {
         //     val musicId = soundPool.load(this, R.raw.mennybol, 1)
 
         playerStatus.text = "idle"
-        btnBell.setOnClickListener {
-            soundPool.play(bellId, VOLUME, VOLUME, 1, 1, 1.0f)
-            playerStatus.text = "bell"
-            //  btnBell.isEnabled = false
-        }
 
         btnMusic.setOnClickListener {
-            val mediaPlayer = MediaPlayer.create(this, R.raw.mennybol);
+            val mediaPlayer = MediaPlayer.create(this, R.raw.eot);
             mediaPlayer.start();
             playerStatus.text = "music"
             //  btnMusic.isEnabled = false
